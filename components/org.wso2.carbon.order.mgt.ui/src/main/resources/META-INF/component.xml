@@ -23,7 +23,7 @@
             <i18n-key>order.menu</i18n-key>
             <i18n-bundle>org.wso2.carbon.order.mgt.ui.i18n.Resources</i18n-bundle>
             <parent-menu>manage_menu</parent-menu>
-            <link>../order/index.jsp</link>
+            <link>../order/orderList.jsp</link>
             <region>region1</region>
             <order>50</order>
             <style-class>manage</style-class>
