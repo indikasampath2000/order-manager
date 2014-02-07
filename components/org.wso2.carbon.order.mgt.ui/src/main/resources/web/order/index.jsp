@@ -56,7 +56,7 @@
                 <tr>
                     <th width="40%">Order Number</th>
                     <th width="40%">Customer Name</th>
-                    <th width="20%">Location</th>
+                    <th width="20%">Delivery Location</th>
                 </tr>
                 </thead>
                 <tbody>
