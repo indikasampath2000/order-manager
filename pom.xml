@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>WSO2 Carbon - Order Manager</name>
+    <description>WSO2 carbon component sample written during my training period</description>
 
     <modules>
         <module>components</module>
