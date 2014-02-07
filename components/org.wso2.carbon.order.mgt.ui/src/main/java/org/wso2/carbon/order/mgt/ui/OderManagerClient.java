@@ -6,7 +6,6 @@ import org.apache.axis2.client.ServiceClient;
 import org.apache.axis2.context.ConfigurationContext;
 import org.wso2.carbon.order.mgt.data.xsd.Order;
 
-import java.lang.*;
 import java.lang.Exception;
 import java.rmi.RemoteException;
 
@@ -26,23 +25,23 @@ public class OderManagerClient {
         options.setProperty(org.apache.axis2.transport.http.HTTPConstants.COOKIE_STRING, cookie);
     }
 
-    public void addOrder(Order order) throws Exception {
+    public void addOrder(Order order) throws OrderManagerExceptionException {
         try{
             stub.addOrder(order);
         }catch (RemoteException e) {
             String msg = "Cannot add the order"
                     + " . Backend service may be unvailable";
-            throw new Exception(msg, e);
+            throw new RuntimeException(msg, e);
         }
     }
 
-    public Order[] getAllOrders() throws Exception {
+    public Order[] getAllOrders() {
         try{
             return stub.getAllOrders();
         }catch (RemoteException e) {
             String msg = "Cannot get list of order"
                     + " . Backend service may be unvailable";
-            throw new Exception(msg, e);
+            throw new RuntimeException(msg, e);
         }
     }
 }

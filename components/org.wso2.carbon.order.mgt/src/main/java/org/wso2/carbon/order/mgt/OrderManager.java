@@ -39,9 +39,9 @@ public class OrderManager {
      * @param order
      * @throws Exception
      */
-    public void addOrder(Order order) throws Exception {
+    public void addOrder(Order order) throws RuntimeException {
         if(order == null || order.getOrderNumber() == null){
-            throw new Exception("Invalid Order");
+            throw new RuntimeException("Invalid Order");
         }
         orderMap.put(order.getOrderNumber(), order);
     }
