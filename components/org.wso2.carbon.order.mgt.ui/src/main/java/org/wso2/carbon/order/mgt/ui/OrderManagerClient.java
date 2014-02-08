@@ -12,11 +12,11 @@ import java.rmi.RemoteException;
 /**
  * Order Manager Web Service Client
  */
-public class OderManagerClient {
+public class OrderManagerClient {
 
     private OrderManagerStub stub;
 
-    public OderManagerClient(ConfigurationContext configCtx, String backendServerURL, String cookie) throws AxisFault {
+    public OrderManagerClient(ConfigurationContext configCtx, String backendServerURL, String cookie) throws AxisFault {
         String serviceURL = backendServerURL+"OrderManager";
         stub = new OrderManagerStub(configCtx, serviceURL);
         ServiceClient client = stub._getServiceClient();
@@ -25,6 +25,11 @@ public class OderManagerClient {
         options.setProperty(org.apache.axis2.transport.http.HTTPConstants.COOKIE_STRING, cookie);
     }
 
+    /**
+     * Add order
+     * @param order
+     * @throws OrderManagerExceptionException
+     */
     public void addOrder(Order order) throws OrderManagerExceptionException {
         try{
             stub.addOrder(order);
@@ -35,6 +40,10 @@ public class OderManagerClient {
         }
     }
 
+    /**
+     * Get all orders
+     * @return
+     */
     public Order[] getAllOrders() {
         try{
             return stub.getAllOrders();

@@ -30,11 +30,11 @@
                 (ConfigurationContext) config.getServletContext().getAttribute(CarbonConstants.CONFIGURATION_CONTEXT);
         String cookie = (String) session.getAttribute(ServerConstants.ADMIN_SERVICE_COOKIE);
 
-        OderManagerClient client;
+        OrderManagerClient client;
         Order[] orders;
 
         try {
-            client = new OderManagerClient(configContext, serverURL, cookie);
+            client = new OrderManagerClient(configContext, serverURL, cookie);
             orders = client.getAllOrders();
         } catch (Exception e) {
             CarbonUIMessage.sendCarbonUIMessage(e.getMessage(), CarbonUIMessage.ERROR, request, e);
