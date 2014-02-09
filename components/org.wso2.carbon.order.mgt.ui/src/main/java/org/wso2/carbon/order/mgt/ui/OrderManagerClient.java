@@ -6,7 +6,6 @@ import org.apache.axis2.client.ServiceClient;
 import org.apache.axis2.context.ConfigurationContext;
 import org.wso2.carbon.order.mgt.data.xsd.Order;
 
-import java.lang.Exception;
 import java.rmi.RemoteException;
 
 /**

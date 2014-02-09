@@ -39,7 +39,7 @@ public class OrderManager {
      * @param order
      * @throws Exception
      */
-    public void addOrder(Order order) throws RuntimeException {
+    public void addOrder(Order order) {
         if(order == null || order.getOrderNumber() == null){
             throw new RuntimeException("Invalid Order");
         }
