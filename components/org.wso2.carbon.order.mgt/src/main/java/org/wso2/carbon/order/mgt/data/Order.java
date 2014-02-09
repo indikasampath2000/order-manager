@@ -1,9 +1,11 @@
 package org.wso2.carbon.order.mgt.data;
 
+import java.io.Serializable;
+
 /**
  * Order
  */
-public class Order {
+public class Order implements Serializable {
 
     private Long orderNumber;
     private String customerName;
