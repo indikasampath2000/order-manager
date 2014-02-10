@@ -57,4 +57,17 @@ public class OrderManager {
         }
         return orderList;
     }
+
+    /**
+     * Get order details by given order number
+     * @param orderNumber
+     * @return
+     */
+    public Order getOrderByOrderNumber(Long orderNumber){
+        Order order = null;
+        if(orderNumber != null){
+            order = orderMap.get(orderNumber);
+        }
+        return order;
+    }
 }
